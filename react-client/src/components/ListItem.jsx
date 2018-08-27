@@ -2,7 +2,9 @@ import React from 'react';
 
 const ListItem = (props) => (
   <div>
-    { props.item.description }
+    {console.log(props.handleClick)}
+    <button onClick={props.handleClick} value={props.item.strIngredient1}>Add</button>
+    { props.item.strIngredient1 }
   </div>
 )
 
