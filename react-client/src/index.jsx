@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import List from './components/List.jsx';
 import Search from './components/Search.jsx';
-import Cocktails from './components/Cocktails.jsx';
+import ResultList from './components/ResultList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -88,7 +88,7 @@ class App extends React.Component {
         <div>
           {this.state.searchList.map( (item) => item )}
           <button onClick={this.findDrinks}>find drinks</button>
-          {this.state.drinksList.length > 0 && <Cocktails drinks={this.state.drinksList}/>}
+          {this.state.drinksList.length > 0 && <ResultList drinks={this.state.drinksList}/>}
         </div>
       </div>
     )
